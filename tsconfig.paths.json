@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@interfaces/*": ["./src/interfaces/*"],
-      // Suppress 'Cannot import type declaration files.' (node_modules/@types)
       "@typings/*": ["./src/typings/*"],
       "@redux/*": ["./src/redux/*"],
       "@reducers/*": ["./src/redux/reducers/*"],
