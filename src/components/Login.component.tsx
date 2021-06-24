@@ -1,6 +1,9 @@
 import { BsPerson, BsUnlock } from "react-icons/bs";
 
+import LoginThunk from "@thunks/Login.thunk";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 const LoginContainer = styled.div`
   width: 100vw;
@@ -108,6 +111,15 @@ const LoginButton = styled.button`
  * Component's body
  */
 const Login: React.FC<{}> = () => {
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(LoginThunk(login, password));
+  };
+
   return (
     <LoginContainer>
       <LoginWrapper>
@@ -116,19 +128,27 @@ const Login: React.FC<{}> = () => {
             <LabelIcon>
               <BsPerson />
             </LabelIcon>
-            <LoginInput name="username" type="text" placeholder="Login" />
+            <LoginInput
+              onChange={(e) => setLogin(e.target.value)}
+              name="username"
+              type="text"
+              placeholder="Login"
+            />
           </LoginLabel>
           <LoginLabel>
             <LabelIcon>
               <BsUnlock />
             </LabelIcon>
             <LoginInput
+              onChange={(e) => setPassword(e.target.value)}
               name="password"
               type="password"
               placeholder="••••••••"
             />
           </LoginLabel>
-          <LoginButton type="submit">Sign in</LoginButton>
+          <LoginButton type="button" onClick={handleClick}>
+            Sign in
+          </LoginButton>
         </LoginForm>
       </LoginWrapper>
     </LoginContainer>
