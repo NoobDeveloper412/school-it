@@ -1,4 +1,5 @@
 import App from "./App";
+import GlobalStyling from "@stylings/Global.styling";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider as StoreProvider } from "react-redux";
@@ -9,9 +10,11 @@ import theme from "@themes/Main.theme";
 ReactDOM.render(
   <React.StrictMode>
     <StoreProvider store={store}>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
+      <GlobalStyling>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </GlobalStyling>
     </StoreProvider>
   </React.StrictMode>,
   document.getElementById("root")
