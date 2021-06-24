@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { Provider as StoreProvider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import store from "@redux/store";
-import theme from "@theme/main.theme";
+import theme from "@themes/Main.theme";
 
 ReactDOM.render(
   <React.StrictMode>
