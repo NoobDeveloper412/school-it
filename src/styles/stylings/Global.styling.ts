@@ -5,6 +5,7 @@ const GlobalStyling = createGlobalStyle`
     margin: 0 !important;
     width: 0 !important;
     font-family: 'Poppins', sans-serif;
+    background-color: #1a1e34;
   }
 
   *, *::before, *::after {
