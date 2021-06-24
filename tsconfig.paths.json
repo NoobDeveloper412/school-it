@@ -6,7 +6,7 @@
       "@typings/*": ["./src/typings/*"],
       "@redux/*": ["./src/redux/*"],
       "@reducers/*": ["./src/redux/reducers/*"],
-      "@actions/*": ["./src/redux/actions*"],
+      "@actions/*": ["./src/redux/actions/*"],
       "@contants": ["./src/config/constants"],
       "@components/*": ["./src/components/*"],
       "@utils/*": ["./src/utils/*"],
@@ -15,7 +15,8 @@
       "@styles/*": ["./src/styles/*"],
       "@stylings/*": ["./src/styles/stylings/*"],
       "@themes/*": ["./src/styles/themes/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@services/*": ["./src/services/*"]
     }
   }
 }
