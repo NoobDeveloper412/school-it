@@ -17,12 +17,12 @@ const theme: Theme = {
   primaryDark: "#1a1e34",
   breakpoints: {
     xs: "0px",
-    sm: "576px",
+    sm: "480px",
     md: "768px",
     lg: "992px",
     xl: "1200px",
     xxl: "1400px",
   },
-};
+} as const;
 
 export default theme;
