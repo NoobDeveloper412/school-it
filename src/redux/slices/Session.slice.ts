@@ -2,8 +2,7 @@ import LoginThunk from "@thunks/Login.thunk";
 import RefreshAccessTokenThunk from "@thunks/RefreshAccessToken.thunk";
 import { SessionInitialState } from "@typings/Session.slice.types";
 import { createSlice } from "@reduxjs/toolkit";
-import runLoginFailedSideEffects from "@sideeffects/Login.failed.sideeffect";
-import runLoginSuccessSideEffects from "@sideeffects/Login.success.sideeffect";
+import sideeffects from "@sideeffects/Sideeffects.manager";
 
 const initialState = {
   isLogged: false,
@@ -32,18 +31,20 @@ const loginSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(LoginThunk.fulfilled, (state, action) => {
-      runLoginSuccessSideEffects();
+      sideeffects.login.success();
       return { ...state, ...action.payload, isLogged: true };
     });
     builder.addCase(LoginThunk.rejected, (state, action) => {
-      runLoginFailedSideEffects();
-      return { ...state };
+      sideeffects.login.failed();
+      return initialState;
     });
     builder.addCase(RefreshAccessTokenThunk.fulfilled, (state, action) => {
+      sideeffects.refreshAccessToken.success();
       return { ...state, ...action.payload, isLogged: true };
     });
     builder.addCase(RefreshAccessTokenThunk.rejected, (state, action) => {
-      return { ...state, isLogged: false };
+      sideeffects.refreshAccessToken.failed();
+      return initialState;
     });
   },
 });
