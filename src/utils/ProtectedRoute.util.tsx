@@ -2,7 +2,7 @@ import { Redirect, Route } from "react-router-dom";
 
 import { ProtectedRouteProps } from "@typings/ProtectedRoute.util.types";
 import React from "react";
-import useAppSelector from "../hooks/useAppSelector.hook";
+import useAppSelector from "@hooks/useAppSelector.hook";
 
 export default function ProtectedRoute({
   children,

@@ -1,3 +1,3 @@
-const constats = Object.freeze({});
+const constants = Object.freeze({});
 
-export { constats };
+export { constants };
