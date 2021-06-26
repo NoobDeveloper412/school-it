@@ -5,7 +5,6 @@ import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import useAppDispatch from "@hooks/useAppDispatch.hook";
 import useAppSelector from "@hooks/useAppSelector.hook";
-import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 const LoginContainer = styled.div`
@@ -119,7 +118,7 @@ const Login: React.FC<{}> = () => {
 
   const isLogged = useAppSelector((state) => state.session.isLogged);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleClick = () => {
     dispatch(LoginThunk({ login, password }));
