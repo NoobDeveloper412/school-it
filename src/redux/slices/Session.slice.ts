@@ -11,8 +11,8 @@ const initialState = {
   accessTokenExpiry: null,
 } as SessionInitialState;
 
-const loginSlice = createSlice({
-  name: "login",
+const sessionSlice = createSlice({
+  name: "session",
   initialState,
   reducers: {
     /** Development-only action */
@@ -22,11 +22,9 @@ const loginSlice = createSlice({
       },
       prepare: (state) => state,
     },
-    logout: {
-      reducer: (state, action) => {
-        return { ...state, ...action.payload, isLogged: false };
-      },
-      prepare: (state) => state,
+    logout: () => {
+      sideeffects.logout.success();
+      return initialState;
     },
   },
   extraReducers: (builder) => {
@@ -49,5 +47,5 @@ const loginSlice = createSlice({
   },
 });
 
-export const { login, logout } = loginSlice.actions;
-export default loginSlice.reducer;
+export const { login, logout } = sessionSlice.actions;
+export default sessionSlice.reducer;
