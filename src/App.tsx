@@ -27,6 +27,16 @@ export default function App() {
           <Route path="/login">
             <LoginPage />
           </Route>
+          <Route path="/status">
+            <div>Status page</div>
+          </Route>
+          <Route
+            path="/source"
+            component={() => {
+              window.location.href = "https://github.com/Jokurale/school-it";
+              return null;
+            }}
+          ></Route>
           <Route path="/" exact>
             <IndexPage />
           </Route>
