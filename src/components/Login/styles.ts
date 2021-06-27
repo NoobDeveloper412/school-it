@@ -1,13 +1,6 @@
-import { BsPerson, BsUnlock } from "react-icons/bs";
-
-import LoginThunk from "@thunks/Login.thunk";
-import { Redirect } from "react-router-dom";
 import styled from "styled-components";
-import useAppDispatch from "@hooks/useAppDispatch.hook";
-import useAppSelector from "@hooks/useAppSelector.hook";
-import { useState } from "react";
 
-const LoginContainer = styled.div`
+export const LoginContainer = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -16,7 +9,7 @@ const LoginContainer = styled.div`
   background-color: ${(props) => props.theme.primaryDark};
 `;
 
-const LoginWrapper = styled.div`
+export const LoginWrapper = styled.div`
   padding: 4rem;
   border-radius: 2px;
   background: ${(props) => props.theme.info};
@@ -31,13 +24,13 @@ const LoginWrapper = styled.div`
   }
 `;
 
-const LoginForm = styled.form`
+export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-const LabelIcon = styled.div`
+export const LabelIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,13 +41,13 @@ const LabelIcon = styled.div`
   }
 `;
 
-const LoginLabel = styled.label`
+export const LoginLabel = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const LoginInput = styled.input`
+export const LoginInput = styled.input`
   border: none;
   border-bottom: 1px solid ${(props) => props.theme.secondary};
   transition-duration: 0.2s;
@@ -82,7 +75,7 @@ const LoginInput = styled.input`
   }
 `;
 
-const LoginButton = styled.button`
+export const LoginButton = styled.button`
   transition-duration: 0.2s;
   padding: 0.5rem 1rem;
   display: flex;
@@ -108,59 +101,3 @@ const LoginButton = styled.button`
     transform: translateY(-4px);
   }
 `;
-
-/**
- * Component's body
- */
-const Login: React.FC<{}> = () => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-
-  const isLogged = useAppSelector((state) => state.session.isLogged);
-
-  const dispatch = useAppDispatch();
-
-  const handleClick = () => {
-    dispatch(LoginThunk({ login, password }));
-  };
-
-  return (
-    <LoginContainer>
-      <LoginWrapper>
-        {!isLogged ? (
-          <LoginForm>
-            <LoginLabel>
-              <LabelIcon>
-                <BsPerson />
-              </LabelIcon>
-              <LoginInput
-                onChange={(e) => setLogin(e.target.value)}
-                name="username"
-                type="text"
-                placeholder="Login"
-              />
-            </LoginLabel>
-            <LoginLabel>
-              <LabelIcon>
-                <BsUnlock />
-              </LabelIcon>
-              <LoginInput
-                onChange={(e) => setPassword(e.target.value)}
-                name="password"
-                type="password"
-                placeholder="••••••••"
-              />
-            </LoginLabel>
-            <LoginButton type="button" onClick={handleClick}>
-              Sign in
-            </LoginButton>
-          </LoginForm>
-        ) : (
-          <Redirect to="/dashboard" />
-        )}
-      </LoginWrapper>
-    </LoginContainer>
-  );
-};
-
-export default Login;
