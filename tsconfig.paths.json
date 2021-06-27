@@ -2,22 +2,22 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@interfaces/*": ["./src/interfaces/*"],
-      "@typings/*": ["./src/typings/*"],
-      "@redux/*": ["./src/redux/*"],
-      "@slices/*": ["./src/redux/slices/*"],
-      "@thunks/*": ["./src/redux/thunks/*"],
       "@components/*": ["./src/components/*"],
-      "@utils/*": ["./src/utils/*"],
       "@config/*": ["./src/config/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@redux/*": ["./src/redux/*"],
       "@repositories/*": ["./src/repositories/*"],
+      "@services/*": ["./src/services/*"],
+      "@sideeffects/*": ["./src/sideeffects/*"],
+      "@slices/*": ["./src/redux/slices/*"],
       "@styles/*": ["./src/styles/*"],
       "@stylings/*": ["./src/styles/stylings/*"],
       "@themes/*": ["./src/styles/themes/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@services/*": ["./src/services/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@sideeffects/*": ["./src/sideeffects/*"]
+      "@thunks/*": ["./src/redux/thunks/*"],
+      "@typings/*": ["./src/typings/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   }
 }
