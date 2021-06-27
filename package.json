@@ -60,7 +60,6 @@
   "devDependencies": {
     "react-app-rewire-alias": "^1.0.3",
     "react-app-rewired": "^2.1.8",
-    "redux-devtools-extension": "^2.13.9",
-    "styled-components.macro": "^1.0.0"
+    "redux-devtools-extension": "^2.13.9"
   }
 }
