@@ -43,7 +43,7 @@ School-it frontend app for REST API interaction that includes:
   ```bash
   yarn run dev
   ```
-- or try to build project deploy project using:
+- or try to build & deploy project using:
   ```bash
   yarn run build
   ```
@@ -74,5 +74,6 @@ School-it frontend app for REST API interaction that includes:
 - react-toastify
 - react-modal
 - redux-persist
+- react-app-rewired
 - styled-components
 - jest
