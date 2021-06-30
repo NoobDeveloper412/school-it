@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# school-it 📃
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+◼ Integrated with [_school-it-auth-server_](https://github.com/Jokurale/school-it-auth-server) & [_school-it-resource-api_](https://github.com/Jokurale/school-it-resource-api)
 
-## Available Scripts
+## About project 🧧
 
-In the project directory, you can run:
+School-it frontend app for REST API interaction that includes:
 
-### `yarn start`
+- Student's dashboard:
+  - Profile
+  - Personal information (including addresses and so on)
+  - School info summary
+  - Service status
+  - Attendance records
+  - Group's schedule
+  - Marks
+  - Homeworks
+  - Groups which student belongs to
+- Teacher's dashboard:
+  - ...everything that student's dashboard contains, excluding group-related information
+- Administrative dashboard including everything mentioned above plus:
+  - User management
+  - Room management
+  - Hour management
+  - Lesson management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Backend implementation model 🗂
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div align="center">
+  <img src="https://svgshare.com/i/YfM.svg">
+</div>
+<br />
 
-### `yarn test`
+## Installation process 🔨
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone or download and extract repo
+- Make sure your node is ^15.12.0
+- Install all dependencies via:
+  ```bash
+  yarn install
+  ```
+- if everything's fine, run (to start further development with built-in webpack live server):
+  ```bash
+  yarn run dev
+  ```
+- or try to build project deploy project using:
+  ```bash
+  yarn run build
+  ```
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- _DONE!_ 🎉
+  <br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Potential further changes & TODOS 🧭
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- General dashboard design
+- General index page design
+- Tests!
 
-### `yarn eject`
+## Built With 📐
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- CRA
+- axios
+- typescript
+- bcrypt
+- dotenv
+- jsonwebtoken
+- DefinitelyTyped
+- react
+- redux (RTK)
+- react-redux
+- react-toastify
+- react-modal
+- redux-persist
+- styled-components
+- jest
