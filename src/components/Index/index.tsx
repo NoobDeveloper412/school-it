@@ -1,5 +1,8 @@
 import {
   IndexContainer,
+  IndexJumbotron,
+  IndexJumbotronHeading,
+  IndexJumbotronImage,
   IndexNav,
   IndexNavItem,
   IndexNavItems,
@@ -7,10 +10,13 @@ import {
   IndexWrapper,
 } from "./styles";
 
+import { ColoredSpan } from "../shared/ColoredSpan.shared";
 import StyledLink from "@components/shared/StyledLink.shared";
 import { logout } from "@slices/Session.slice";
 import useAppDispatch from "../../hooks/useAppDispatch.hook";
 import useAppSelector from "@hooks/useAppSelector.hook";
+
+// import { ReactComponent as JumbotronImage } from "@assets/svg/exam.svg";
 
 /**
  * Component's body
@@ -23,7 +29,9 @@ const Index: React.FC<{}> = () => {
     <IndexWrapper>
       <IndexContainer>
         <IndexNav>
-          <IndexNavLogo>SCHOOL.IT</IndexNavLogo>
+          <IndexNavLogo>
+            SCHOOL<ColoredSpan>.</ColoredSpan>IT
+          </IndexNavLogo>
           <IndexNavItems>
             <IndexNavItem>
               <StyledLink to="/">Home</StyledLink>
@@ -46,6 +54,18 @@ const Index: React.FC<{}> = () => {
             </IndexNavItem>
           </IndexNavItems>
         </IndexNav>
+        <IndexJumbotron>
+          <IndexJumbotronHeading>
+            <h1>
+              School management made <ColoredSpan>easy</ColoredSpan>
+            </h1>
+            <h3>Simple, scalable and blazing-fast RMS</h3>
+          </IndexJumbotronHeading>
+          <IndexJumbotronImage>
+            <div>Image goes here</div>
+            {/* <JumbotronImage /> */}
+          </IndexJumbotronImage>
+        </IndexJumbotron>
       </IndexContainer>
     </IndexWrapper>
   );

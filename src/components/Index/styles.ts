@@ -1,8 +1,8 @@
 import styled from "styled-components/macro";
 
 export const IndexWrapper = styled.div`
+  max-width: 100vw;
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,6 @@ export const IndexWrapper = styled.div`
 export const IndexContainer = styled.div`
   margin: 0 auto;
   width: 80%;
-  height: 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -51,5 +50,33 @@ export const IndexNavItem = styled.div`
 
   &:last-child {
     margin-right: 0rem;
+  }
+`;
+
+export const IndexJumbotron = styled.div`
+  width: 100%;
+  height: 400px;
+  display: flex;
+`;
+
+export const IndexJumbotronHeading = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  h1,
+  h3 {
+    margin: 0;
+  }
+`;
+
+export const IndexJumbotronImage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  svg {
+    width: 80%;
   }
 `;
