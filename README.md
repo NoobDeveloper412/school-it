@@ -27,7 +27,7 @@ School-it frontend app for REST API interaction that includes:
 ## Backend implementation model 🗂
 
 <div align="center">
-  <img src="https://svgshare.com/i/YfM.svg">
+  <img src="https://svgshare.com/i/Ye3.svg">
 </div>
 <br />
 
