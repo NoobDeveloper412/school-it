@@ -1,5 +1,5 @@
 {
-  "name": "school-it-cra",
+  "name": "Typescript-Metronic-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,9 +30,6 @@
     "styled-components": "^5.3.0",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
-  },
-  "repository": {
-    "url": "https://github.com/Jokurale/school-it"
   },
   "scripts": {
     "start": "react-app-rewired start",

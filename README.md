@@ -2,7 +2,7 @@
 
 ◼ Integrated with [_school-it-auth-server_](https://github.com/Jokurale/school-it-auth-server) & [_school-it-resource-api_](https://github.com/Jokurale/school-it-resource-api)
 
-## About project 🧧
+## About project
 
 School-it frontend app for REST API interaction that includes:
 
@@ -52,12 +52,6 @@ School-it frontend app for REST API interaction that includes:
 
 - _DONE!_ 🎉
   <br>
-
-## Potential further changes & TODOS 🧭
-
-- General dashboard design
-- General index page design
-- Tests!
 
 ## Built With 📐
 
